@@ -17,7 +17,7 @@ public class Jake implements GameObject{
     Random random = new Random();
     private SceneInfo sceneInfo;
 
-    public Jake(SceneInfo sceneInfo, Point position)
+    public Jake(Point position)
     {
         this.sceneInfo = sceneInfo;
         X = position.x;

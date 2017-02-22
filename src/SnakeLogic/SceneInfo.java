@@ -1,5 +1,10 @@
 package SnakeLogic;
 
+import javafx.scene.canvas.Canvas;
+
+import java.awt.*;
+import java.util.Random;
+
 /**
  * Created by Ebbe Vang on 21-02-2017.
  */
@@ -8,6 +13,13 @@ public class SceneInfo {
     private double fieldWidth;
     private int width = 30;
     private int height = 20;
+    private Random random = new Random();
+
+    public SceneInfo(Canvas canvas)
+    {
+        fieldHeight = canvas.getHeight() / height;
+        fieldWidth =canvas.getWidth() / width;
+    }
 
     public double getFieldHeight() {
         return fieldHeight;
@@ -40,4 +52,10 @@ public class SceneInfo {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public Point getRandomPoint() {
+        return new Point(random.nextInt(width), random.nextInt(height));
+    }
 }
+
+
